@@ -8,6 +8,7 @@ docker exec -it mathurt_user_service bash
 
 
 rabbitmq-start &
+
 #------------------
 To run tests
 python3.6 manage.py test tests
