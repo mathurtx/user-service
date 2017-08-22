@@ -1,3 +1,7 @@
+User Service using Django, rabbit-mq and docker
+
+To run:
+
 docker build -t user_service .
 docker run -d --name mathurt_user_service -p 127.0.0.1:8000:8000 -p 127.0.0.1:5673:5672 -p 127.0.0.1:15673:15672 --rm -i -t user_service
 docker exec -it mathurt_user_service bash 
