@@ -5,6 +5,8 @@ To run:
 docker build -t user_service .
 docker run -d --name mathurt_user_service -p 127.0.0.1:8000:8000 -p 127.0.0.1:5673:5672 -p 127.0.0.1:15673:15672 --rm -i -t user_service
 docker exec -it mathurt_user_service bash 
+
+
 rabbitmq-start &
 #------------------
 To run tests
@@ -18,6 +20,9 @@ python3.6 consumer.py &
 Can be executed from docker container or from the client machine
 Issues with docker on local machine can sometimes prevent port forwarding and it can be run from inside the container
 #------------------
+
+
+
 POST CURL:
 curl -X POST   http://127.0.0.1:8000/v1/users/   -H 'cache-control: no-cache'   -H 'content-type: application/json'   -H 'postman-token: 7c199d37-511b-4b2f-94b9-6ba8c9b444a2'   -d '{
   "email": "joey@friends.com",
